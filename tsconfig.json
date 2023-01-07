@@ -1,15 +1,16 @@
 {
   "compilerOptions": {
     "target": "es2017",
+    "baseUrl": ".",
     "paths": {
       "@/components/*": [
         "src/components/*"
       ],
       "@/interfaces/*": [
-        "interfaces/*"
+        "src/interfaces/*"
       ],
       "@/config/*": [
-        "config/*"
+        "src/config/*"
       ]
     },
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -18,7 +19,7 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "esModuleInterop": true,
+    "esModuleInterop": true,x
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
