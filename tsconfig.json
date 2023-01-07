@@ -6,12 +6,16 @@
       "@/components/*": [
         "src/components/*"
       ],
+      "@/pages/*": [
+        "src/pages/*"
+      ],
       "@/interfaces/*": [
         "src/interfaces/*"
       ],
       "@/config/*": [
         "src/config/*"
-      ]
+      ],
+      "@/styles/*": ["styles/*"]
     },
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -27,6 +31,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "types.d.ts", "sasajest.config.js"],
   "exclude": ["node_modules"]
 }
