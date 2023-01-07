@@ -1,6 +1,17 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2017",
+    "paths": {
+      "@/components/*": [
+        "src/components/*"
+      ],
+      "@/interfaces/*": [
+        "interfaces/*"
+      ],
+      "@/config/*": [
+        "config/*"
+      ]
+    },
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
