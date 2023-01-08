@@ -28,9 +28,6 @@ export default async function handler(
   const { data } = await MERCADO_LIVRE_API_CLIENT.get(
     '/sites/MLA/search?q=:query&limit=4'
   );
-  const {} = data;
-  // const parsedListItem = () => {
-  //   parseItemData();
-  // };
+
   return res.status(200).json(data);
 }
