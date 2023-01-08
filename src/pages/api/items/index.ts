@@ -1,9 +1,7 @@
 import { NextApiResponse, NextApiRequest } from 'next';
 import MERCADO_LIVRE_API_CLIENT from '@/config/MERCADO_LIVRE_API_CLIENT';
-import { ItemDTO } from '@/interfaces/Front';
-import { parseItemData } from '@/utils/parseItemData';
-// import { Item } from '@/interfaces/item';
-// import axios from '@/config/axios';
+import { parseListItemData } from '@/utils/parseListItemData';
+import { GetListItem } from '@/interfaces/BFF';
 
 /**
  * @swagger
@@ -17,17 +15,25 @@ import { parseItemData } from '@/utils/parseItemData';
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<ItemDTO[]>
+  res: NextApiResponse<any>
 ) {
   res.setHeader('Cache-Control', 's-maxage=60, stale-while-revalidate');
-  const { method } = req;
+  const {
+    method,
+    query: { q },
+  } = req;
   if (method !== 'GET') {
     res.setHeader('Allow', ['GET']);
     res.status(405).end(`Method ${method} Not Allowed`);
   }
-  const { data } = await MERCADO_LIVRE_API_CLIENT.get(
-    '/sites/MLA/search?q=:query&limit=4'
+  const { data } = await MERCADO_LIVRE_API_CLIENT.get<GetListItem>(
+    `/sites/MLA/search?q=query&limit=4`
   );
 
-  return res.status(200).json(data);
+  //users/161560823
+  // address -> city
+  // console.log(data.);
+  const parseResponse = parseListItemData(data);
+
+  return res.status(200).json(parseResponse);
 }

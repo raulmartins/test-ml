@@ -1,4 +1,4 @@
-export type AuthorDTO= {
+export type AuthorDTO = {
   name: string;
   lastname: string;
 };
@@ -16,9 +16,4 @@ export type ItemDTO = {
     amount: number;
     decimal: number;
   };
-};
-
-export type ItemPayload = {
-  author: AuthorDTO;
-  item: ItemDTO;
 };
