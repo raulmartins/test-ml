@@ -1,0 +1,24 @@
+@import '../../../styles/colors.scss';
+.nav {
+  width: 100vw;
+}
+.breadcrumb {
+  list-style: none;
+  padding: 10px;
+  font-size: medium;
+
+  .breadcrumbItem {
+    display: inline-block;
+    color: $color-gray-02;
+
+    & + .breadcrumbItem::before {
+      content: '>';
+      padding: 0 5px;
+    }
+
+    &.active {
+      color: $color-gray-01;
+      font-weight: 500;
+    }
+  }
+}

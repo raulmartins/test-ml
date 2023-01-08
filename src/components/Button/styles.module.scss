@@ -1,0 +1,17 @@
+@import '../../../styles/colors.scss';
+
+
+.button {
+    background-color: $color-blue-01;
+    padding: 0 2.4rem;
+    color: $color-gray-06;
+    border-radius: 0.4rem;
+    width: 100%;
+    transition: background-color .3s ease;
+    font-size: 1.6rem;
+    height: 4.8rem;
+}
+
+.button:hover {
+    background-color: darken($color-blue-01, 10%);
+}
