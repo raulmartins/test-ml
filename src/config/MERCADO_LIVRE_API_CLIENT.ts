@@ -3,7 +3,7 @@ import { MERCADO_LIVRE_API } from './environment';
 
 const MERCADO_LIVRE_API_CLIENT = axios.create({
   baseURL: MERCADO_LIVRE_API,
-  timeout: 1000,
+  timeout: 5000,
   headers: { 'Content-type': 'application/json' },
 });
 
