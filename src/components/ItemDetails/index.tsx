@@ -21,6 +21,7 @@ const ItemDetails: React.FC<Props> = ({ itemDetails }) => {
           width={400}
           alt='Imagem do produto selecionado.'
           className={Styles.image}
+          priority
         />
         <div className={Styles.wrapperDetails}>
           <span
