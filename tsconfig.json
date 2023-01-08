@@ -12,8 +12,14 @@
       "@/interfaces/*": [
         "src/interfaces/*"
       ],
+      "@/services/*": [
+        "src/services/*"
+      ],
       "@/config/*": [
         "src/config/*"
+      ],
+      "@/utils/*": [
+        "src/utils/*"
       ],
       "@/styles/*": [
         "styles/*"
