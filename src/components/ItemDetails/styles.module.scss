@@ -1,0 +1,71 @@
+@import '../../../styles/colors.scss';
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+    padding: 1.6rem;
+    background-color: $color-gray-06;
+    max-width: 102.4rem;
+}
+
+.image {
+    flex: 1;
+}
+
+.wrapperIlustration {
+    display: flex;
+    gap: 1.6rem;
+}
+
+.wrapperDetails {
+    display: flex;
+    flex-direction: column;
+    max-width: 30rem;
+}
+
+.status {
+    font-size: 1.2rem;
+    color: $color-gray-02;
+    font-weight: 300;
+}
+
+.title {
+    margin-bottom: 1.6rem;
+}
+
+.title {
+    font-size: 2.4rem;
+}
+
+.price {
+    display: flex;
+    align-items: flex-start;
+    font-weight: 500;
+    font-size: 3.2rem;
+    margin-bottom: 4rem;
+}
+
+.currency {
+    margin-right: .8rem;
+}
+
+.decimal {
+    font-size: 1.8rem;
+    margin-top: .4rem;
+}
+
+.wrapperDescription {
+    max-width: 70rem;
+    h2 {
+        font-size: 2.4rem;
+        font-weight: 400;
+        padding-bottom: 2.4rem;
+    }
+
+    p {
+        font-size: 1.6rem;
+        color: lighten($color-gray-01, 50%);
+    }
+}
