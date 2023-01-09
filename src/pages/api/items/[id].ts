@@ -1,10 +1,13 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import MERCADO_LIVRE_API_CLIENT from '@/config/MERCADO_LIVRE_API_CLIENT';
-import { ItemGetById } from '@/interfaces/BFF/Item';
-import { DescriptionDTO } from '@/interfaces/BFF/description';
-import { CurrencyDTO } from '@/interfaces/BFF';
 import { parseItemData } from '@/utils/parseItemData';
 import { ItemDTO } from '@/interfaces/Front';
+
+import {
+  categoryService,
+  currencyService,
+  descriptionService,
+  itemService,
+} from 'src/services';
 
 /**
  * @swagger
@@ -34,21 +37,18 @@ export default async function itemHandler(
       res.setHeader('Allow', ['GET']);
       res.status(405).end(`Method ${method} Not Allowed`);
     }
-    const { data: item } = await MERCADO_LIVRE_API_CLIENT.get<ItemGetById>(
-      `/items/${id}`
-    );
-    const { currency_id } = item;
-    const { data: currency } = await MERCADO_LIVRE_API_CLIENT.get<CurrencyDTO>(
-      `/currencies/${currency_id}`
-    );
+    const { data: item } = await itemService.getById(id as string);
+    const { currency_id, category_id } = item;
+    const { data: currency } = await currencyService(currency_id);
+    const { data: descriptionItem } = await descriptionService(id as string);
+    const { data: categories } = await categoryService(category_id);
 
-    const { data: descriptionItem } =
-      await MERCADO_LIVRE_API_CLIENT.get<DescriptionDTO>(
-        `/items/${id}/description`
-      );
-
-    res.setHeader('Cache-Control', 's-maxage=60, stale-while-revalidate');
-    const parsedItem = parseItemData({ item, currency, descriptionItem });
+    const parsedItem = parseItemData({
+      item,
+      currency,
+      descriptionItem,
+      categories,
+    });
     res.status(200).json({ ...parsedItem });
   } catch (error) {
     res.status(404).send({ statusCode: '404', message: 'Item not found' });

@@ -1,20 +1,23 @@
+import { CategoryById, PathFromRoot } from './../interfaces/BFF/category';
 import { CurrencyDTO, DescriptionDTO, ItemGetById } from '@/interfaces/BFF';
 import { ItemDTO } from '@/interfaces/Front/item';
 
 type Props = {
   item: ItemGetById;
-  descriptionItem: DescriptionDTO;
+  descriptionItem?: DescriptionDTO;
   currency: CurrencyDTO;
+  categories?: CategoryById;
 };
 
 type ParseItemData = (data: Props) => ItemDTO;
 
 export const parseItemData: ParseItemData = ({
   currency: { symbol },
-  descriptionItem,
+  descriptionItem = {} as DescriptionDTO,
   item,
+  categories,
 }) => {
-  const { plain_text: description } = descriptionItem;
+  const { plain_text: description = '' } = descriptionItem;
   const {
     id,
     title,
@@ -34,6 +37,8 @@ export const parseItemData: ParseItemData = ({
     decimal: +decimal,
   };
 
+  const listCategory = categories ? categories.path_from_root : [];
+  const category = listCategory.map((cat) => cat.name);
   return {
     id,
     title,
@@ -43,5 +48,6 @@ export const parseItemData: ParseItemData = ({
     picture,
     price,
     sold_quantity,
+    category,
   };
 };
