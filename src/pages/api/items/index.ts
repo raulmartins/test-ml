@@ -1,7 +1,6 @@
 import { NextApiResponse, NextApiRequest } from 'next';
-import MERCADO_LIVRE_API_CLIENT from '@/config/MERCADO_LIVRE_API_CLIENT';
-import { parseListItemData } from '@/utils/parseListItemData';
-import { GetListItem } from '@/interfaces/BFF';
+import { parseListItems } from '@/utils/parseListItemData';
+import { currencyService, itemService } from 'src/services';
 
 /**
  * @swagger
@@ -20,20 +19,18 @@ export default async function handler(
   res.setHeader('Cache-Control', 's-maxage=60, stale-while-revalidate');
   const {
     method,
-    query: { q },
+    query: { search },
   } = req;
+
   if (method !== 'GET') {
     res.setHeader('Allow', ['GET']);
     res.status(405).end(`Method ${method} Not Allowed`);
+    return;
   }
-  const { data } = await MERCADO_LIVRE_API_CLIENT.get<GetListItem>(
-    `/sites/MLA/search?q=query&limit=4`
-  );
-
-  //users/161560823
-  // address -> city
-  // console.log(data.);
-  const parseResponse = parseListItemData(data);
+  const { data } = await itemService.getAll(search as string);
+  const { currency_id } = data.results[0];
+  const { data: currency } = await currencyService(currency_id);
+  const parseResponse = parseListItems(data, currency);
 
   return res.status(200).json(parseResponse);
 }
