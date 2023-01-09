@@ -1,4 +1,5 @@
 @import '../../../styles/colors.scss';
+
 .card {
   display: flex;
   align-items: center;
@@ -6,14 +7,13 @@
   width: 100%;
   height: 18rem;
   border-bottom: 2px solid $color-gray-05;
-  &:hover {
-    cursor: pointer;
-  }
 }
+
 .cardImage {
   border-radius: 0.4rem;
   border: 1px solid $color-gray-04;
 }
+
 .containerContent {
   max-width: 1024px;
   width: 100%;
@@ -28,10 +28,12 @@
   display: flex;
   padding: 1.6rem;
 }
+
 .cardValue {
   font-size: large;
   font-weight: 500;
 }
+
 .badgeDelivery {
   display: flex;
   align-items: center;
@@ -42,6 +44,7 @@
   background-color: $color-green-02;
   margin: 0 0.8rem;
 }
+
 .cardDescription {
   max-width: 50rem;
   display: flex;
@@ -52,6 +55,7 @@
     font-weight: 500;
   }
 }
+
 .cardCity {
   display: flex;
   flex-direction: row-reverse;

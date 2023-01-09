@@ -1,27 +1,27 @@
 import Style from './breadcrumb.module.scss';
 
-type Breadcrumbs = {
-  items: string[];
+type Props = {
+  categories: string[];
 };
 
-function Breadcrumb(props: Breadcrumbs) {
-  const { items } = props;
+function Breadcrumb(props: Props) {
+  const { categories = [] } = props;
 
   return (
     <nav className={Style.nav} aria-label='breadcrumb'>
       <ol className={Style.breadcrumb}>
-        {items.map((item, index) => {
+        {categories.map((category, index) => {
           const key = `tag-li-${index}`;
           return (
             <li
               key={key}
               className={
-                index === items.length - 1
+                index === categories.length - 1
                   ? `${Style.breadcrumbItem} ${Style.active}`
                   : `${Style.breadcrumbItem}`
               }
             >
-              {item}
+              {category}
             </li>
           );
         })}
