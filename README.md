@@ -48,18 +48,24 @@ Para rodar documentação do storybook, rode o seguinte comando
 Instale teste-ml com npm
 
 ```bash
+  git clone https://github.com/raulmartins/test-ml.git
   cd teste-ml
   npm install
   npm run start
+  abrir o browser e acessar o endereço http://localhost:3000/
+
 ```
 
 Instale teste-ml com yarn
 
 ```bash
+  git clone https://github.com/raulmartins/test-ml.git
   cd teste-ml
   yarn start
-
+  abrir o browser e acessar o endereço http://localhost:3000/
 ```
+
+#### OBS: Em caso da porta 3000 está ocupada, avaliar qual porta a aplicação foi executada
 
 ## Rodando os testes
 
