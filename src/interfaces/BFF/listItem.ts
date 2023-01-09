@@ -1,5 +1,15 @@
-import { ShippingDTO } from './Item';
+import { ItemGetById } from './Item';
+
+export type ItemDTO = Omit<ItemGetById, 'pictures'> & {
+  thumbnail: string;
+  seller_address: SellerAddressDTO;
+};
+
 export type GetListItem = {
+  paging: PagingDTO;
+  results: ItemDTO[];
+};
+export type ListItemDTO = {
   paging: PagingDTO;
   query: string;
   results: ItemDTO[];
@@ -8,15 +18,6 @@ export type GetListItem = {
 export type PagingDTO = {
   limit: number;
   offset: number;
-};
-
-export type ItemDTO = {
-  id: string;
-  title: string;
-  thumbnail: string;
-  price: number;
-  shipping: ShippingDTO;
-  seller_address: SellerAddressDTO;
 };
 
 export type SellerAddressDTO = {

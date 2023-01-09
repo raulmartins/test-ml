@@ -6,6 +6,7 @@ export type PictureDTO = {
   id: string;
   url: string;
 };
+
 export type ItemGetById = {
   id: string;
   title: string;
@@ -15,4 +16,5 @@ export type ItemGetById = {
   price: number;
   currency_id: string;
   shipping: ShippingDTO;
+  category_id: string;
 };
