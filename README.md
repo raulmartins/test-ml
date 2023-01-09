@@ -39,26 +39,26 @@ Para rodar documentação do storybook, rode o seguinte comando
 
 ## Stack utilizada
 
-**Front-end:** Next, Playwight, React-testing-library, Storybook, Next-seo, Typescript,
+**Front-end:** Next, React, Playwright, React-testing-library, Storybook, Next-seo, Typescript, Sass, Husky, LintStaged, Eslint
 
 **Back-end:** Node, Next-swagger-doc, Typescript
 
 ## Instalação
 
-Instale teste-mercado-livre com npm
+Instale teste-ml com npm
 
 ```bash
-  cd teste-mercado-livre
+  cd teste-ml
   npm install
-  npm run dev
+  npm run start
 ```
 
-Instale teste-mercado-livre com yarn
+Instale teste-ml com yarn
 
 ```bash
-  cd teste-mercado-livre
-  yarn
-  yarn dev
+  cd teste-ml
+  yarn start
+
 ```
 
 ## Rodando os testes
