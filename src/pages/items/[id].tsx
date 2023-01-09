@@ -28,11 +28,12 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const id = params?.id as string;
   const itemDetails = await getItemById(id);
 
+  if (!itemDetails) {
+    return {
+      notFound: true,
+    };
+  }
   return {
-    redirect: !itemDetails && {
-      permanent: false,
-      destination: '/404',
-    },
     props: {
       itemDetails,
     },
