@@ -12,6 +12,7 @@
 .cardImage {
   border-radius: 0.4rem;
   border: 0.1rem solid $color-gray-04;
+  object-fit: cover;
 }
 
 .containerContent {
