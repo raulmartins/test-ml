@@ -7,11 +7,12 @@ const Error: React.FC = () => {
   return (
     <Body>
       <div className={Styles.container}>
-        <h1>Nenhum item encontrado</h1>
+        <h1>Não há anúncios que correspondem à sua busca</h1>
+
         <Image
-          src='/images/404.png'
-          width={500}
-          height={500}
+          src='/images/lupav2.png'
+          width={70}
+          height={70}
           alt='página de erro'
         />
       </div>

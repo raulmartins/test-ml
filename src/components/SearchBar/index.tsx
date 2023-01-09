@@ -1,14 +1,15 @@
 import { useRouter } from 'next/router';
-import { FormEvent, useCallback, useRef } from 'react';
+import { FormEvent, useCallback, useRef, useEffect, useState } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
 
 import Styles from './styles.module.scss';
 
 export const SearchBar: React.FC = () => {
-  const inputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
+  const inputRef = useRef<HTMLInputElement>(null);
   const handleSubmit = useCallback((e: FormEvent) => {
     e.preventDefault();
+    // setValue(inputRef.current?.value as string);
     router.push(`/items?search=${inputRef.current?.value}`);
   }, []);
 

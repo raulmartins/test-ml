@@ -12,6 +12,8 @@
   border-bottom-left-radius: 0.4rem;
   padding-left: 0.8rem;
   outline: none;
+  &:focus {
+  }
 }
 
 .button {
