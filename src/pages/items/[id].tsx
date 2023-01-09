@@ -1,8 +1,7 @@
 import { Body } from '@/components/Body';
 import { ItemDetails } from '@/components/ItemDetails';
-import { Header } from '@/components/Header';
-import { Breadcrumb } from '@/components/Breadcrumb';
 import { Seo } from '@/components/SEO';
+import { Breadcrumb } from '@/components/Breadcrumb';
 import { ItemDTO } from '@/interfaces/Front/item';
 import { GetServerSideProps } from 'next';
 import { getItemById } from '@/services/getItemById';
@@ -12,11 +11,12 @@ type Props = {
 };
 
 const Item: React.FC<Props> = ({ itemDetails }) => {
+  const { category } = itemDetails;
+
   return (
     <Seo title='Item details' description='Page show item details'>
-      <Header />
       <Body>
-        <Breadcrumb items={['Home', 'Produtos', 'Categoria']} />
+        <Breadcrumb categories={category} />
         <ItemDetails itemDetails={itemDetails} />
       </Body>
     </Seo>
@@ -29,6 +29,10 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const itemDetails = await getItemById(id);
 
   return {
+    redirect: !itemDetails && {
+      permanent: false,
+      destination: '/404',
+    },
     props: {
       itemDetails,
     },
