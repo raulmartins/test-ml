@@ -9,7 +9,6 @@ export const SearchBar: React.FC = () => {
   const router = useRouter();
   const handleSubmit = useCallback((e: FormEvent) => {
     e.preventDefault();
-
     router.push(`/items?search=${inputRef.current?.value}`);
   }, []);
 

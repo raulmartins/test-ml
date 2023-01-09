@@ -25,6 +25,7 @@ function Card({ item }: Props) {
             height={150}
             width={150}
             object-fit='scale-down'
+            loading='lazy'
           />
         </div>
       </Link>

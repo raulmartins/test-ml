@@ -6,16 +6,16 @@
   padding: 1rem;
   width: 100%;
   height: 18rem;
-  border-bottom: 2px solid $color-gray-05;
+  border-bottom: 0.2rem solid $color-gray-05;
 }
 
 .cardImage {
   border-radius: 0.4rem;
-  border: 1px solid $color-gray-04;
+  border: 0.1rem solid $color-gray-04;
 }
 
 .containerContent {
-  max-width: 1024px;
+  max-width: 102.4rem;
   width: 100%;
   height: 100%;
   display: flex;

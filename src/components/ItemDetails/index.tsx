@@ -20,6 +20,8 @@ const ItemDetails: React.FC<Props> = ({ itemDetails }) => {
           height={400}
           width={400}
           alt='Imagem do produto selecionado.'
+          loading='lazy'
+          unoptimized={true}
           className={Styles.image}
         />
         <div className={Styles.wrapperDetails}>
