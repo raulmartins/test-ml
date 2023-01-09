@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![Logo](https://tm.ibxk.com.br/2021/08/11/11165408110376.jpg?ims=1120x420)
 
-## Getting Started
+# Teste de avaliação Software Engineer Frontend
 
-First, run the development server:
+Teste avaliação para Mercado Livre é uma página onde os usuários podem procurar e encontrar produtos específicos à venda na plataforma. Essa página pode ser acessada digitando o nome ou palavra-chave do produto na barra de pesquisa no topo da página. Os resultados da pesquisa exibirão uma lista de produtos que atendem aos critérios de pesquisa, juntamente com informações sobre cada produto, como o preço, o vendedor e a descrição do produto. Os usuários podem usar essa página para comparar diferentes produtos e encontrar o que melhor atende às suas necessidades.
 
-```bash
-npm run dev
-# or
-yarn dev
+## Referência
+
+- [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+- [NextJS Docs](https://nextjs.org/docs)
+
+## Documentação da API
+
+#### Retorna todos os itens
+
+```http
+  GET /api/items
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Retorna um item
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```http
+  GET /api/items/${id}
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+#### Retorna documentação do swagger
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```http
+  GET /api-docs
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Documentação
 
-## Learn More
+Para rodar documentação do storybook, rode o seguinte comando
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+  yarn storybook
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Stack utilizada
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+**Front-end:** Next, Playwight, React-testing-library, Storybook, Next-seo, Typescript,
 
-## Deploy on Vercel
+**Back-end:** Node, Next-swagger-doc, Typescript
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Instalação
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Instale teste-mercado-livre com npm
+
+```bash
+  cd teste-mercado-livre
+  npm install
+  npm run dev
+```
+
+Instale teste-mercado-livre com yarn
+
+```bash
+  cd teste-mercado-livre
+  yarn
+  yarn dev
+```
+
+## Rodando os testes
+
+Para rodar os testes unitário, rode o seguinte comando
+
+```bash
+  yarn test
+  or
+  yarn test:ci
+
+```
+
+Para rodar os testes E2E, rode o seguinte comando
+
+```bash
+  yarn test:e2e
+
+```
+
+## Autores
+
+- [Raul Mrtins](https://github.com/raulmartins)
