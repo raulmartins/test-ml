@@ -1,6 +1,6 @@
 import { Card } from '@/components/Card';
 import { ItemIntoList } from '@/interfaces/Front';
-import Style from './listeItem.module.scss';
+import Styles from './styles.module.scss';
 
 type Props = {
   list: ItemIntoList[];
@@ -8,7 +8,7 @@ type Props = {
 
 const ListItem: React.FC<Props> = ({ list }) => {
   return (
-    <div id='list-result' className={Style.conteinerList}>
+    <div id='list-result' className={Styles.conteinerList}>
       {list.map((item) => (
         <Card key={item.id} item={item} />
       ))}

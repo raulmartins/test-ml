@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Style from './card.module.scss';
+import Styles from './styles.module.scss';
 import { BsTruck } from 'react-icons/bs';
 import { ItemIntoList } from '@/interfaces/Front';
 import { Price } from '@/components/Price';
@@ -15,11 +15,11 @@ function Card({ item }: Props) {
   const urlToRedirect = `/items/${id}`;
 
   return (
-    <div id='card' className={Style.card}>
+    <div id='card' className={Styles.card}>
       <Link href={urlToRedirect}>
         <div>
           <Image
-            className={Style.cardImage}
+            className={Styles.cardImage}
             src={picture}
             alt={title}
             height={150}
@@ -28,22 +28,22 @@ function Card({ item }: Props) {
           />
         </div>
       </Link>
-      <div className={Style.containerContent}>
-        <div className={Style.containerValue}>
+      <div className={Styles.containerContent}>
+        <div className={Styles.containerValue}>
           <Price price={price} />
           {free_shipping && (
-            <span className={Style.badgeDelivery}>
+            <span className={Styles.badgeDelivery}>
               <BsTruck />
             </span>
           )}
         </div>
         <Link href={urlToRedirect}>
-          <div className={Style.cardDescription}>
+          <div className={Styles.cardDescription}>
             <p>{title}</p>
           </div>
         </Link>
       </div>
-      <div className={Style.cardCity}>
+      <div className={Styles.cardCity}>
         <p>{city}</p>
       </div>
     </div>

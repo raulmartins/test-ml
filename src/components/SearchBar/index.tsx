@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import { FormEvent, useCallback, useRef } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
 
-import Style from './styles.module.scss';
+import Styles from './styles.module.scss';
 
 export const SearchBar: React.FC = () => {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -14,15 +14,15 @@ export const SearchBar: React.FC = () => {
   }, []);
 
   return (
-    <form className={Style.form} onSubmit={handleSubmit}>
+    <form className={Styles.form} onSubmit={handleSubmit}>
       <input
         ref={inputRef}
         type='search'
         placeholder='Pesquisar'
         aria-label='Pesquisar itens de compra'
-        className={Style.input}
+        className={Styles.input}
       />
-      <button type='submit' className={Style.button}>
+      <button type='submit' className={Styles.button}>
         <AiOutlineSearch size={32} color='#474537' />
       </button>
     </form>

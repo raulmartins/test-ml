@@ -1,4 +1,4 @@
-import Style from './breadcrumb.module.scss';
+import Styles from './styles.module.scss';
 
 type Props = {
   categories: string[];
@@ -8,8 +8,8 @@ function Breadcrumb(props: Props) {
   const { categories = [] } = props;
 
   return (
-    <nav className={Style.nav} aria-label='breadcrumb'>
-      <ol className={Style.breadcrumb}>
+    <nav className={Styles.nav} aria-label='breadcrumb'>
+      <ol className={Styles.breadcrumb}>
         {categories.map((category, index) => {
           const key = `tag-li-${index}`;
           return (
@@ -17,8 +17,8 @@ function Breadcrumb(props: Props) {
               key={key}
               className={
                 index === categories.length - 1
-                  ? `${Style.breadcrumbItem} ${Style.active}`
-                  : `${Style.breadcrumbItem}`
+                  ? `${Styles.breadcrumbItem} ${Styles.active}`
+                  : `${Styles.breadcrumbItem}`
               }
             >
               {category}

@@ -2,12 +2,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { SearchBar } from '../SearchBar';
 
-import Style from './header.module.scss';
+import Styles from './styles.module.scss';
 
 export const Header: React.FC = () => {
   return (
-    <header className={Style.header}>
-      <div className={Style.container}>
+    <header className={Styles.header}>
+      <div className={Styles.container}>
         <Link href='/items'>
           <Image
             src='/images/logo-v2.png'
@@ -16,7 +16,7 @@ export const Header: React.FC = () => {
             alt='imagem celebrando a parceria com aperto de mãos'
           />
         </Link>
-        <div className={Style.wrapperSearchBar}>
+        <div className={Styles.wrapperSearchBar}>
           <SearchBar />
         </div>
       </div>
