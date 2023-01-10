@@ -1,19 +1,21 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Button } from '@/components/Button';
+import { Breadcrumb } from '@/components/Breadcrumb';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Example/Button',
-  component: Button,
+  title: 'Example/Breadcrumb',
+  component: Breadcrumb,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-} as ComponentMeta<typeof Button>;
+} as ComponentMeta<typeof Breadcrumb>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+const Template: ComponentStory<typeof Breadcrumb> = (args) => (
+  <Breadcrumb {...args} />
+);
 
 export const Default = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
+
 Default.args = {
-  children: 'Comprar',
+  categories: ['carro', 'mitsubish', 'caminhonete'],
 };
