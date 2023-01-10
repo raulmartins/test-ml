@@ -16,6 +16,7 @@ export const SearchBar: React.FC = () => {
   return (
     <form className={Styles.form} onSubmit={handleSubmit}>
       <input
+        data-testid='search-bar'
         ref={inputRef}
         type='search'
         placeholder='Pesquisar'

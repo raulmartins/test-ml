@@ -15,7 +15,7 @@ function Card({ item }: Props) {
   const urlToRedirect = `/items/${id}`;
 
   return (
-    <div id='card' className={Styles.card}>
+    <div data-testid='card' id='card' className={Styles.card}>
       <Link href={urlToRedirect}>
         <div>
           <Image

@@ -13,7 +13,7 @@ const ItemDetails: React.FC<Props> = ({ itemDetails }) => {
     itemDetails;
 
   return (
-    <div className={Styles.container}>
+    <div data-testid='item-details' className={Styles.container}>
       <div className={Styles.wrapperIlustration}>
         <Image
           src={picture}

@@ -8,7 +8,11 @@ function Breadcrumb(props: Props) {
   const { categories = [] } = props;
 
   return (
-    <nav className={Styles.nav} aria-label='breadcrumb'>
+    <nav
+      data-testid='breadcrumb'
+      className={Styles.nav}
+      aria-label='breadcrumb'
+    >
       <ol className={Styles.breadcrumb}>
         {categories.map((category, index) => {
           const key = `tag-li-${index}`;

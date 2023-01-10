@@ -10,7 +10,7 @@ export const Button: React.FC<ButtonHTMLAttributes<HTMLButtonElement>> = ({
   const classStyle = clsx(Styles.button, className);
 
   return (
-    <button className={classStyle} {...props}>
+    <button data-testid='button' className={classStyle} {...props}>
       {children}
     </button>
   );

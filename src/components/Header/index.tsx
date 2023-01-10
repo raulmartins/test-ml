@@ -6,10 +6,11 @@ import Styles from './styles.module.scss';
 
 export const Header: React.FC = () => {
   return (
-    <header className={Styles.header}>
+    <header data-testid='header' className={Styles.header}>
       <div className={Styles.container}>
         <Link href='/items'>
           <Image
+            data-testid='icon-header'
             src='/images/logo-v2.png'
             width={48}
             height={48}

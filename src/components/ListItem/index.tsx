@@ -8,7 +8,11 @@ type Props = {
 
 const ListItem: React.FC<Props> = ({ list }) => {
   return (
-    <div id='list-result' className={Styles.conteinerList}>
+    <div
+      data-testid='list-item'
+      id='list-result'
+      className={Styles.conteinerList}
+    >
       {list.map((item) => (
         <Card key={item.id} item={item} />
       ))}

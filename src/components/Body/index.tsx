@@ -8,7 +8,11 @@ export const Body: React.FC<HTMLAttributes<HTMLDivElement>> = ({
   ...props
 }) => {
   return (
-    <div className={clsx(Styles.container, className)} {...props}>
+    <div
+      data-testid='body'
+      className={clsx(Styles.container, className)}
+      {...props}
+    >
       {children}
     </div>
   );
