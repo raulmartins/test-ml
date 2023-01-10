@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 type Seo = {
   title: string;
   description: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };
 
 function Seo({ title, description, children }: Seo) {
@@ -16,6 +16,27 @@ function Seo({ title, description, children }: Seo) {
         title={title}
         description={description}
         openGraph={{ title, url }}
+        additionalLinkTags={[
+          {
+            rel: 'apple-touch-icon',
+            href: '/apple-touch-icon.png',
+            sizes: '180x180',
+          },
+          {
+            rel: 'icon',
+            sizes: '32x32',
+            href: '/favicon-32x32.png',
+          },
+          {
+            rel: 'icon',
+            sizes: '16x16',
+            href: '/favicon-16x16.png',
+          },
+          {
+            rel: 'manifest',
+            href: '/site.webmanifest',
+          },
+        ]}
       />
 
       {children}

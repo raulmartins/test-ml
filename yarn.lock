@@ -9765,6 +9765,11 @@ nested-error-stacks@^2.0.0, nested-error-stacks@^2.1.0:
   resolved "https://registry.yarnpkg.com/nested-error-stacks/-/nested-error-stacks-2.1.1.tgz#26c8a3cee6cc05fbcf1e333cd2fc3e003326c0b5"
   integrity sha512-9iN1ka/9zmX1ZvLV9ewJYEk9h7RyRRtqdK0woXcqohu8EWIerfPUjYJPg0ULy0UqP7cslmdGc8xKDJcojlKiaw==
 
+next-image-zoom@^1.1.7:
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/next-image-zoom/-/next-image-zoom-1.1.7.tgz#5a4e9f0f32b3b2e49b7c153f30a0ddf301607b10"
+  integrity sha512-dSXA/c7z6SZQQvwoCP+JK9s0A5Nx1ZtGwIM7p/j7dP2gsLhdkwrTlShkQw+SvXDKgU5iVB2XoUKS+DFBGm49og==
+
 next-router-mock@^0.8.0:
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/next-router-mock/-/next-router-mock-0.8.0.tgz#e4400b166941d2e8f2617c9b5f4091bbd916d943"

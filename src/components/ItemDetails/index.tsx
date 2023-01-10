@@ -2,6 +2,7 @@ import { ItemDTO } from '@/interfaces/Front/item';
 import Image from 'next/image';
 import { Button } from '../Button';
 import { Price } from '../Price';
+import Zoom from 'next-image-zoom';
 import Styles from './styles.module.scss';
 
 type Props = {
@@ -15,15 +16,19 @@ const ItemDetails: React.FC<Props> = ({ itemDetails }) => {
   return (
     <div data-testid='item-details' className={Styles.container}>
       <div className={Styles.wrapperIlustration}>
-        <Image
-          src={picture}
-          height={400}
-          width={400}
-          alt='Imagem do produto selecionado.'
-          loading='lazy'
-          unoptimized={true}
-          className={Styles.image}
-        />
+        <div className={Styles.image}>
+          <Zoom
+            src={picture}
+            height={400}
+            width={400}
+            alt='Imagem do produto selecionado.'
+            loading='lazy'
+            style={{
+              objectFit: 'contain',
+              width: '100%',
+            }}
+          />
+        </div>
         <div className={Styles.wrapperDetails}>
           <span
             className={Styles.status}
