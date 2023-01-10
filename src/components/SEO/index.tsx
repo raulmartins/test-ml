@@ -1,13 +1,13 @@
 import { NextSeo } from 'next-seo';
 import { useRouter } from 'next/router';
 
-type Seo = {
+type Props = {
   title: string;
   description: string;
   children?: React.ReactNode;
 };
 
-function Seo({ title, description, children }: Seo) {
+const Seo: React.FC<Props> = ({ title, description, children }) => {
   const { asPath } = useRouter();
   const url = `${process.env.NEXT_PUBLIC_APLICATION_URL}${asPath}`;
   return (
@@ -42,6 +42,6 @@ function Seo({ title, description, children }: Seo) {
       {children}
     </div>
   );
-}
+};
 
 export { Seo };

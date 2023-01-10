@@ -4,7 +4,7 @@ type Props = {
   categories: string[];
 };
 
-function Breadcrumb(props: Props) {
+const Breadcrumb: React.FC<Props> = (props: Props) => {
   const { categories = [] } = props;
 
   return (
@@ -32,6 +32,6 @@ function Breadcrumb(props: Props) {
       </ol>
     </nav>
   );
-}
+};
 
 export { Breadcrumb };

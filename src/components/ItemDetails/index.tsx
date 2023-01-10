@@ -1,5 +1,4 @@
 import { ItemDTO } from '@/interfaces/Front/item';
-import Image from 'next/image';
 import { Button } from '../Button';
 import { Price } from '../Price';
 import Zoom from 'next-image-zoom';

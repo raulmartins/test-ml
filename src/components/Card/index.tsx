@@ -9,7 +9,7 @@ type Props = {
   item: ItemIntoList;
 };
 
-function Card({ item }: Props) {
+const Card: React.FC<Props> = ({ item }) => {
   const { price, free_shipping, picture, title, city, id } = item;
 
   const urlToRedirect = `/items/${id}`;
@@ -49,6 +49,6 @@ function Card({ item }: Props) {
       </div>
     </div>
   );
-}
+};
 
 export { Card };

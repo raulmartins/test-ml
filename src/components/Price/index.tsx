@@ -8,7 +8,7 @@ type Props = {
   };
 };
 
-export const Price: React.FC<Props> = ({ price }) => {
+const Price: React.FC<Props> = ({ price }) => {
   const { amount, currency, decimal } = price;
   const parsedDecimal = String(decimal || 0).padEnd(2, '0');
 
@@ -26,3 +26,5 @@ export const Price: React.FC<Props> = ({ price }) => {
     </span>
   );
 };
+
+export { Price };

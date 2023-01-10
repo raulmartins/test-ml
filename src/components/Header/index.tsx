@@ -4,7 +4,7 @@ import { SearchBar } from '../SearchBar';
 
 import Styles from './styles.module.scss';
 
-export const Header: React.FC = () => {
+const Header: React.FC = () => {
   return (
     <header data-testid='header' className={Styles.header}>
       <div className={Styles.container}>
@@ -24,3 +24,5 @@ export const Header: React.FC = () => {
     </header>
   );
 };
+
+export { Header };

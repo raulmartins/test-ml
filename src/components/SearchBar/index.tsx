@@ -4,7 +4,7 @@ import { AiOutlineSearch } from 'react-icons/ai';
 
 import Styles from './styles.module.scss';
 
-export const SearchBar: React.FC = () => {
+const SearchBar: React.FC = () => {
   const router = useRouter();
   const inputRef = useRef<HTMLInputElement>(null);
   const handleSubmit = useCallback((e: FormEvent) => {
@@ -29,3 +29,5 @@ export const SearchBar: React.FC = () => {
     </form>
   );
 };
+
+export { SearchBar };

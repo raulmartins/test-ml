@@ -1,15 +1,15 @@
 import React from 'react';
 import Styles from './styles.module.scss';
 
-type Prop = {
+type Props = {
   children: React.ReactNode;
 };
 
-function Main({ children }: Prop) {
+const Main: React.FC<Props> = ({ children }) => {
   return (
     <main data-testid='main' className={Styles.container}>
       {children}
     </main>
   );
-}
+};
 export { Main };

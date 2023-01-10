@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import { ButtonHTMLAttributes } from 'react';
 import Styles from './styles.module.scss';
 
-export const Button: React.FC<ButtonHTMLAttributes<HTMLButtonElement>> = ({
+const Button: React.FC<ButtonHTMLAttributes<HTMLButtonElement>> = ({
   className,
   children,
   ...props
@@ -15,3 +15,5 @@ export const Button: React.FC<ButtonHTMLAttributes<HTMLButtonElement>> = ({
     </button>
   );
 };
+
+export { Button };
