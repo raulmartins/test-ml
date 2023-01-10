@@ -24,6 +24,7 @@ module.exports = {
     '<rootDir>/.public/',
     '<rootDir>/.config/',
     '<rootDir>/.styles/',
+    '<rootDir>/e2e/',
   ],
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
