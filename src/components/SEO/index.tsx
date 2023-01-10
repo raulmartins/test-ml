@@ -11,7 +11,7 @@ function Seo({ title, description, children }: Seo) {
   const { asPath } = useRouter();
   const url = `${process.env.NEXT_PUBLIC_APLICATION_URL}${asPath}`;
   return (
-    <>
+    <div data-testid='seo'>
       <NextSeo
         title={title}
         description={description}
@@ -19,7 +19,7 @@ function Seo({ title, description, children }: Seo) {
       />
 
       {children}
-    </>
+    </div>
   );
 }
 

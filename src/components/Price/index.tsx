@@ -13,10 +13,16 @@ export const Price: React.FC<Props> = ({ price }) => {
   const parsedDecimal = String(decimal || 0).padEnd(2, '0');
 
   return (
-    <span className={Styles.price}>
-      <span className={Styles.currency}>{currency}</span>
-      <span className={Styles.amount}>{amount}</span>
-      <span className={Styles.decimal}>{parsedDecimal}</span>
+    <span data-testid='price' className={Styles.price}>
+      <span data-testid='currency' className={Styles.currency}>
+        {currency}
+      </span>
+      <span data-testid='amount' className={Styles.amount}>
+        {amount}
+      </span>
+      <span data-testid='decimal' className={Styles.decimal}>
+        {parsedDecimal}
+      </span>
     </span>
   );
 };
