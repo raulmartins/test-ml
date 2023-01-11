@@ -12,17 +12,27 @@
 
 .image {
   flex: 1;
+  min-width: 30rem;
 }
 
 .wrapperIlustration {
   display: flex;
   gap: 1.6rem;
+  @media screen and (max-width: 720px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .wrapperDetails {
   display: flex;
   flex-direction: column;
   max-width: 30rem;
+  @media screen and (max-width: 480px) {
+    display: flex;
+    align-items: flex-start;
+  }
 }
 
 .status {
@@ -34,6 +44,9 @@
 .title {
   margin-bottom: 1.6rem;
   font-size: 2.4rem;
+  @media screen and (max-width: 480px) {
+    font-size: 1.6rem;
+  }
 }
 
 .wrapperDescription {

@@ -12,6 +12,7 @@ Teste avaliação para Mercado Livre é uma página onde os usuários podem proc
 - [Playwright](https://playwright.dev/docs/intro)
 - [Jest](https://jestjs.io/pt-BR/docs/getting-started)
 - [Sass](https://sass-lang.com/documentation/)
+- [Sentry](https://docs.sentry.io/)
 
 ## 🔗 Click no link abaixo para acessar aplicação
 
@@ -48,7 +49,7 @@ Para rodar documentação do storybook, rode o seguinte comando
 
 ## Stack utilizada
 
-**Front-end:** Next, React, Playwright, React-testing-library, Storybook, Next-seo, Typescript, Sass, Husky, LintStaged, Eslint
+**Front-end:** Next, React, Playwright, React-testing-library, Storybook, Next-seo, Typescript, Sass, Husky, LintStaged, Eslint, Sentry
 
 **Back-end:** Node, Next-swagger-doc, Typescript
 

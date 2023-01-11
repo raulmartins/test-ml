@@ -34,7 +34,6 @@ const ItemDetails: React.FC<Props> = ({ itemDetails }) => {
           >{`${condition} - ${sold_quantity} vendidos`}</span>
           <strong className={Styles.title}>{title}</strong>
           <Price price={price} />
-
           <Button type='button'>Comprar</Button>
         </div>
       </div>
