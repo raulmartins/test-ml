@@ -7,7 +7,15 @@ Teste avaliação para Mercado Livre é uma página onde os usuários podem proc
 ## Referência
 
 - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
-- [NextJS Docs](https://nextjs.org/docs)
+- [NextJS](https://nextjs.org/docs)
+- [Storybook](https://storybook.js.org/docs/ember/get-started/introduction)
+- [Playwright](https://playwright.dev/docs/intro)
+- [Jest](https://jestjs.io/pt-BR/docs/getting-started)
+- [Sass](https://sass-lang.com/documentation/)
+
+## 🔗 Click no link abaixo para acessar aplicação
+
+[![Teste mercado livre](https://images.sftcdn.net/images/t_app-logo-l,f_auto/p/9bf2824e-96d6-11e6-91e1-00163ec9f5fa/2403975397/mercadolivre-logo.png)](https://test-ml-raulmartins.vercel.app/)
 
 ## Documentação da API
 
@@ -35,6 +43,7 @@ Para rodar documentação do storybook, rode o seguinte comando
 
 ```bash
   yarn storybook
+  abrir o browser e acessar o endereço http://localhost:6006/
 ```
 
 ## Stack utilizada
@@ -88,3 +97,7 @@ Para rodar os testes E2E, rode o seguinte comando
 ## Autores
 
 - [Raul Mrtins](https://github.com/raulmartins)
+
+## 🔗 Social Links
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/raulsnitram/)
